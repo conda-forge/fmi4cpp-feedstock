@@ -1,18 +1,18 @@
 {% set name = "fmi4cpp" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.3" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/NTNU-IHB/FMI4cpp/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 78616e9c86a23137a8d3a113fe6420207c3f9ea46442e1c75a01215eb2693bb7
+  url: https://github.com/NTNU-IHB/FMI4cpp/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: f48c630f087bdf8d7a04611f6f30942c870c3c1211a94ef2404c40baa4bcb2c9
 
 build:
   number: 0
   # See https://github.com/conda-forge/staged-recipes/pull/18411#issuecomment-1073669556
-  skip: true  # [osx] 
+  skip: true  # [osx]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x.x') }}
 
@@ -39,7 +39,7 @@ about:
   home: https://github.com/NTNU-IHB/FMI4cpp
   license: MIT
   license_file: LICENSE
-  summary: FMI (Functional Mock-up Interface) 2.0 implementation written in modern C++. 
+  summary: FMI (Functional Mock-up Interface) 2.0 implementation written in modern C++.
 
 extra:
   recipe-maintainers:

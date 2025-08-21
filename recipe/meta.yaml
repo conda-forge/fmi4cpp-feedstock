@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/NTNU-IHB/FMI4cpp/archive/refs/tags/v{{ version }}.tar.gz
   sha256: f48c630f087bdf8d7a04611f6f30942c870c3c1211a94ef2404c40baa4bcb2c9
+  patches:
+    - devendor_pugixml.patch
 
 build:
   number: 4
@@ -25,6 +27,7 @@ requirements:
     - ninja
   host:
     - libzip
+    - pugixml
     - libboost-headers
 
 test:

@@ -1,0 +1,32 @@
+From e45a765d724b632915a61c4d7e67ae66ad1a8f81 Mon Sep 17 00:00:00 2001
+From: Silvio Traversaro <silvio@traversaro.it>
+Date: Thu, 21 Aug 2025 15:44:39 +0200
+Subject: [PATCH] Devendor pugixml
+
+---
+ CMakeLists.txt | 9 +--------
+ 1 file changed, 1 insertion(+), 8 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index c8ed848..36f9eee 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -79,17 +79,10 @@ set(FMI4CPP_EXPORT_TARGET "${PROJECT_NAME}-targets")
+ # ==============================================================================
+ 
+ find_package(LIBZIP REQUIRED)
++find_package(pugixml REQUIRED)
+ 
+ Include(FetchContent)
+ 
+-FetchContent_Declare(
+-        pugixml
+-        GIT_REPOSITORY https://github.com/zeux/pugixml.git
+-        GIT_TAG        v1.12.1
+-)
+-
+-FetchContent_MakeAvailable(pugixml)
+-
+ # ==============================================================================
+ # Targets
+ # ==============================================================================

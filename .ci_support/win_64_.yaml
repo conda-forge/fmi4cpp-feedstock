@@ -12,5 +12,7 @@ libboost_headers:
 - '1.88'
 libzip:
 - '1'
+pugixml:
+- '1.15'
 target_platform:
 - win-64

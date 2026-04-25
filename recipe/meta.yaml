@@ -12,7 +12,7 @@ source:
     - devendor_pugixml.patch
 
 build:
-  number: 4
+  number: 5
   # See https://github.com/conda-forge/staged-recipes/pull/18411#issuecomment-1073669556
   skip: true  # [osx]
   run_exports:
